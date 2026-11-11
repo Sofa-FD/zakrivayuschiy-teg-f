@@ -1,267 +1,507 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
-
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
-}
-
-/* пиксельный шрифт */
-@font-face {
-  font-family: 'Press Start 2P';
-  src: url('/fonts/PressStart2P-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-.page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
-  font-family: 'Inter';
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
-  color: var(--color-text-primary);
-  background-color: var(--color-bg-primary);
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    min-inline-size: 375px;
+    min-block-size: 100dvb;
+    font-family: var(--font-family-Inter);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-primary);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: var(--bg-grid-gradient);
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .header {
-  inline-size: 100%;
-  max-inline-size: 700px;
-  display: flex;
-  flex-direction: column;
-  margin: 100px 0;
+    inline-size: 100%;
+    max-inline-size: 700px;
+    display: flex;
+    flex-direction: column;
+    margin: 100px 0;
 }
 
-/* Верхний блок*/
 .header__main-zone {
-  min-block-size: 327px;
-  border: var(--border-main);
-  /*padding: 20px;*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--color-bg-primary);
+    min-block-size: 327px;
+    border: var(--border-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg-primary);
 }
 
 .header__logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
 }
 
 .header__logo-text {
-  font-family: "Press Start 2P", monospace;
-  font-size: 49px;
-  font-weight: 400;
-  line-height: 100%;
-  text-transform: uppercase;
-  font-style: normal;
-  max-inline-size: 343px;
-  display: block;
+    font-family: var(--font-family-Press-Start);
+    font-size: 49px;
+    font-weight: 400;
+    line-height: 100%;
+    text-transform: uppercase;
+    font-style: normal;
+    max-inline-size: 343px;
+    display: block;
 }
-
 
 .header__title {
-  font-family: "Press Start 2P", monospace;;
-  font-size: 14px;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 100%;
-  text-transform: uppercase;
-  letter-spacing: 0%;
+    font-family: var(--font-family-Press-Start);
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0%;
 }
 
-/* --- ОСНОВНАЯ ЛЕНТА --- */
 .main-content {
-  inline-size: 100%;
-  max-inline-size: 700px;
+    inline-size: 100%;
+    max-inline-size: 700px;
 }
 
 .cards-list {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
-/* --- КАРТОЧКА --- */
 .card {
-  border: var(--border-main);
-  background-color: var(--color-bg-primary);
-  display: flex;
-  flex-direction: column;
-  min-height: 758px;
+    border: var(--border-main);
+    background-color: var(--color-bg-primary);
+    display: flex;
+    flex-direction: column;
 }
 
 .card__title {
-  font-size: 18px;
-  font-weight: 785;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: 0;
-  padding: 3px 10px;
-  border-bottom: var(--border-main);
+    font-size: 18px;
+    font-weight: 785;
+    font-style: normal;
+    line-height: 22px;
+    letter-spacing: 0;
+    padding: 3px 10px;
+    border-bottom: var(--border-main);
 }
 
 .card__image-container {
-  inline-size: 100%;
-  border-bottom: var(--border-main);
-  background-color: #f0f0f0;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  position: relative;
+    inline-size: 100%;
+    border-bottom: var(--border-main);
+    background-color: #f0f0f0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card__image {
-  inline-size: 100%;
-  block-size: 100%;
-  object-fit: cover;
-  display: block;
-  object-position: 98% center;
-  position: relative;
+    object-fit: cover;
+    display: block;
+    object-position: 98% center;
+    position: relative;
 }
 
+.card__image_sepia {
+    filter: sepia(0.8);
+}
+
+.card__image_blur {
+    filter: blur(2px);
+}
+
+.card__image_grayscale {
+    filter: grayscale(1);
+}
+
+.card__image_invert {
+    filter: invert(0.7);
+}
+
+.card__image_hue-rotate {
+    filter: hue-rotate(90deg);
+}
+
+.card__image_saturate {
+    filter: saturate(2.5);
+}
+
+.card__image_combo {
+    filter: contrast(1.4) brightness(0.9) grayscale(0.3);
+}
 
 .card__text-content {
-  margin: 25px 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  font-family: inherit;
+    margin: 25px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .card__image-label {
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  font-family: "Press Start 2P", monospace;
-  font-size: 14px;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 100%;
-  letter-spacing: 0%;
-  text-transform: uppercase;
-  color:  #000000;
-  -webkit-text-stroke: 1px #FFFFFF;
-  opacity: 50%;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-family: var(--font-family-Press-Start);
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: #000000;
+    -webkit-text-stroke: 1px #FFFFFF;
+    mix-blend-mode: hard-light;
+    opacity: 50%;
 }
 
-  .card__paragraph {
-  font-size: 18px;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 21px;
-  letter-spacing: 0%;
-  color: var(--color-text-primary);
+.card__paragraph {
+    font-family: var(--font-family-Inter);
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 21px;
+    letter-spacing: 0%;
+    color: var(--color-text-primary);
 }
 
-/* Панель с кнопками внизу карточки */
 .card__actions {
-  /*padding: 0;*/
-  display: flex;
-  justify-content: flex-end;
-  gap: 12px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
 }
 
-/* --- КНОПКИ --- */
-/* Кнопка-обёртка для иконки сердца */
 .card__icon-button {
-  padding: 0;
-  background: none;
-  border: none;
-  color: var(--color-text-primary);
-  transition: transform 0.1s ease;
+    padding: 0;
+    background: none;
+    border: 2px solid transparent;
+    color: var(--color-text-primary);
+    transition: border-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    width: 40px;
+    cursor: pointer;
 }
 
-/* Ховер на сердце: закрашиваем внутренности черным */
-.card__icon-button:hover .like-icon {
-  fill: var(--color-text-primary);
+.card__icon-button:focus {
+    outline: none;
 }
 
-/* ФОКУС кнопки с иконкой: жесткая квадратная рамка вокруг */
 .card__icon-button:focus-visible {
-  outline: 2px solid var(--color-text-primary);
-  outline-offset: 4px;
+    border-color: var(--color-accent);
 }
-
-/* Кнопка Like текстовая */
-.card__like-button {
-  min-inline-size: 130px;
-  block-size: 40px;
-  margin: 0 25px 0 0;
-  border: var(--border-main);
-  background-color: var(--color-bg-primary);
-  font-family: "Press Start 2P", monospace;
-  font-size: 14px;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 90%;
-  letter-spacing: 0%;
-  text-transform: uppercase;
-  position: relative;
-}
-
-/* Ховер на кнопку Like */
-.card__like-button:hover {
-  background-color: var(--color-bg-hover);
-  color: var(--color-text-hover);
-}
-
-/* ФОКУС на кнопке Like */
-.card__like-button:focus-visible {
-  outline: none;
-}
-
-.card__like-button:focus-visible .button__text {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
 
 .footer {
-  inline-size: 100%;
-  max-inline-size: 700px;
-  margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    inline-size: 100%;
+    max-inline-size: 700px;
 }
 
-/* Кнопка Сохранить */
+.card__like-button,
+.footer__save-button,
+.dialog__close-button {
+    min-inline-size: 130px;
+    block-size: 40px;
+    border: var(--border-main);
+    background-color: var(--color-bg-primary);
+    font-family: var(--font-family-Press-Start);
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 90%;
+    letter-spacing: 0;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .footer__save-button {
-  inline-size: 100%;
-  padding: 20px;
-  border: var(--border-main);
-  background-color: var(--color-bg-primary);
-  box-shadow: var(--shadow-main);
-  font-size: 1rem;
-  font-weight: bold;
-  gap: 15px;
+    inline-size: 100%;
+    width: 306px;
+    height: 84px;
+    margin: 50px 34px 100px 34px;
+    padding: 15px 10px;
+    flex-direction: column;
+    gap: 8px;
+    white-space: nowrap;
+    text-transform: uppercase;
 }
 
-.footer__save-button:hover {
-  background-color: var(--color-bg-hover);
-  color: var(--color-text-hover);
+.card__like-button:focus,
+.footer__save-button:focus,
+.dialog__close-button:focus {
+    outline: none;
 }
 
-.footer__save-button:focus-visible {
-  outline: none;
-  box-shadow: 2px 2px 0px var(--color-text-primary);
-  transform: translate(2px, 2px);
+.card__like-button:focus-visible,
+.footer__save-button:focus-visible,
+.dialog__close-button:focus-visible {
+    box-shadow: 2px 2px 0px var(--color-accent);
 }
 
-.footer__save-icon {
-  flex-shrink: 0;
+.card__like-button::before,
+.footer__save-button::before,
+.dialog__close-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-bg-hover);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 0;
+}
+
+.card__like-button:hover::before,
+.footer__save-button:hover::before,
+.dialog__close-button:hover::before {
+    transform: translateX(0);
+}
+
+.card__like-button .button__text,
+.footer__save-button .footer__button-text,
+.footer__save-button .footer__save-icon,
+.dialog__close-button .button__text {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    mix-blend-mode: difference;
+}
+
+.dialog {
+    display: none;
+    border: var(--border-main);
+    background-color: var(--color-bg-primary);
+    padding: 30px;
+    max-inline-size: 357px;
+    width: 100%;
+}
+
+.dialog[open] {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.dialog__content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.dialog__icon {
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    mix-blend-mode: difference;
+}
+
+.dialog__text {
+    font-family: var(--font-family-Press-Start);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: var(--color-text-primary);
+}
+
+.dialog__form {
+    width: 100%;
+}
+
+.dialog .dialog__close-button {
+    width: 100%;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/*  Стили для SVG иконки  */
+
+.like-icon {
+    display: block;
+    width: 39px;
+    height: 36px;
+    cursor: pointer;
+    transform-origin: center;
+}
+
+/* Нам необходимо перенести группу элементов сердца или саму иконку в центр координат */
+.like-icon * {
+    transform-origin: center;
+}
+
+/* Искры по умолчанию скрыты */
+.like-icon .sparks {
+    opacity: 0;
+}
+
+
+/* 1. СОСТОЯНИЕ ПО УМОЛЧАНИЮ  */
+
+
+.like-icon .contour {
+    fill: var(--contour-color);
+    transition: fill 0.1s linear 0s;
+}
+
+.like-icon .main-body {
+    fill: transparent;
+    transition: fill 0.3s linear 0s;
+}
+
+.like-icon .core {
+    fill: transparent;
+    transition: fill 0.3s linear 0.03s;
+}
+
+
+/* 2. СОСТОЯНИЕ :HOVER */
+
+
+.like-icon:hover .core {
+    fill: var(--heart-color-hover);
+    transition: fill 0.3s linear 0s;
+}
+
+.like-icon:hover .main-body {
+    fill: var(--heart-color-hover);
+    transition: fill 0.3s linear 0.05s;
+}
+
+
+/* 3. СОСТОЯНИЕ :ACTIVE */
+
+
+.like-icon:active .core {
+    fill: var(--heart-color-active);
+    transition: fill 0.3s linear 0s;
+}
+
+.like-icon:active .main-body {
+    fill: var(--heart-color-active);
+    transition: fill 0.3s linear 0.05s;
+}
+
+
+/* 4. СОСТОЯНИЕ .is-liked */
+
+
+.like-icon.is-liked .core {
+    fill: var(--heart-color-active);
+    transition: fill 0.3s linear 0s;
+}
+
+.like-icon.is-liked .main-body {
+    fill: var(--heart-color-active);
+    transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .contour {
+    fill: var(--heart-color-active);
+    transition: fill 0.3s linear 0.06s;
+}
+
+/* Анимация масштабирования иконки (через 0.1s, длится 0.3s) */
+.like-icon.is-liked {
+    animation: heart-scale 0.3s ease-in 0.1s 1;
+}
+
+/* Анимация вспышки искр (через 0.3s, длится 0.3s) */
+.like-icon.is-liked .sparks {
+    animation: sparks-flash 0.3s ease-in 0.3s 1;
+}
+
+
+@media (min-width: 320px) {
+    .header,
+    .main-content,
+    .footer {
+        margin-inline: auto;
+        max-inline-size: 700px;
+    }
+
+    .header {
+        margin: 100px auto;
+    }
+
+    .header__main-zone {
+        padding: 30px;
+        block-size: clamp(327px, 10.93vw + 291.5px, 368px);
+    }
+
+    .card__image-container {
+        display: block;
+        inline-size: 100%;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+    }
+
+    .card__image {
+        inline-size: 100%;
+        block-size: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+@media (min-width: 700px) {
+    .footer .footer__save-button {
+        flex-direction: row;
+        width: 335px;
+        height: 55px;
+        padding: 20px 20px;
+        gap: 8px;
+        margin: 50px auto 100px auto;
+        text-transform: lowercase;
+    }
+
+    .footer .footer__save-button .footer__button-text::first-letter {
+        text-transform: uppercase;
+    }
+
+    .footer .footer__save-button .footer__save-icon {
+        width: 21px;
+        height: 21px;
+    }
+}
+
+@media (width <= 375px) {
+    .header {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .header__logo-text {
+        font-size: clamp(2.8125rem, 0.1563rem + 11.8227vw, 4.0625rem);
+    }
+
+    .card__text-content {
+        margin: 25px;
+    }
+
+    .footer__save-button {
+        width: calc(100% - 30px);
+        height: auto;
+        margin: 50px 15px 100px 15px;
+        padding: 15px 10px;
+        gap: 8px;
+    }
 }

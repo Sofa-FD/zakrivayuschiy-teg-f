@@ -1,29 +1,21 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
-/* Базовые переменные  */
 :root {
-    /* Шрифты */
     --font-size-base: 14px;
     --line-height-base: 1.5;
-
-    /* Основная цветовая палитра */
+    --font-family-Inter: 'Inter', sans-serif;
+    --font-family-Press-Start: 'Press Start 2P', monospace;
     --color-bg-primary: #ffffff;
     --color-text-primary: #000000;
     --color-accent: #ff0000;
-
-    /* Цвета интерактивных состояний (Hover/Focus) */
     --color-bg-hover: #000000;
-    --color-text-hover: #ffffff;
-
-    /* Контуры и границы */
     --border-thickness: 2px;
     --border-main: var(--border-thickness) solid var(--color-text-primary);
-
-    /* Декоративные элементы и тени */
     --shadow-offset: 4px;
-    --shadow-main: var(--shadow-offset) var(--shadow-offset) 0px var(--color-text-primary);
-}
-
-/* Медиа 768px */
-@media (min-width: 768px) {
-
+    --bg-grid-gradient: repeating-linear-gradient(to right, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+    --contour-color: #000000;
+    --animation-fill-color: #ff0000;
+    --heart-color-primary: #FF0000;
+    --heart-color-hover: #000000;
+    --heart-color-active: #ff3333;
 }
