@@ -1,14 +1,20 @@
 :root {
     --font-size-base: 14px;
     --line-height-base: 1.5;
-    --font-family-Inter: 'Inter', sans-serif;
-    --font-family-Press-Start: 'Press Start 2P', monospace;
+    --font-family-inter: 'Inter', sans-serif;
+    --font-family-press-start: 'Press Start 2P', monospace;
     --color-bg-primary: #ffffff;
+    --color-bg-secondary: #f0f0f0;
     --color-text-primary: #000000;
     --color-accent: #ff0000;
     --color-bg-hover: #000000;
     --border-thickness: 2px;
     --border-main: var(--border-thickness) solid var(--color-text-primary);
+    --text-primary-shadow:
+            -1px 0 #FFFFFF,
+            0 1px #FFFFFF,
+            1px 0 #FFFFFF,
+            0 -1px #FFFFFF;
     --shadow-offset: 4px;
     --bg-grid-gradient: repeating-linear-gradient(to right, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
     repeating-linear-gradient(to bottom, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
